@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" role="img" aria-labelledby="title desc">
-  <title id="title">drink. wedding invitation</title><desc id="desc">A blush wedding invitation for drink. mobile drinks.</desc>
-  <image href="/plates/wedding-invitation.png" width="1024" height="1536"/>
-  <g fill="#171a25" font-family="Poppins, Arial, sans-serif">
-    <text x="155" y="285" font-size="43" font-weight="700" letter-spacing="10">INVITATION</text>
-    <text x="145" y="585" font-size="185" font-weight="700" letter-spacing="-16">drink.</text>
-    <text x="155" y="750" font-size="63" font-weight="700" letter-spacing="7">WEDDINGS</text>
-  </g>
-</svg>

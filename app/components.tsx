@@ -21,8 +21,12 @@ export function Passboard() {
   return <section className={`passboard active-${active}`} aria-label="Choose your occasion">
     {(Object.entries(events) as [EventKey, typeof events[EventKey]][]).map(([slug, event]) => (
       <Link href={`/${slug}`} className={`occasion-plate ${event.className} ${active === slug ? "active" : ""}`} key={slug}
-        onMouseEnter={() => setActive(slug)} onFocus={() => setActive(slug)} aria-label={`${event.name}. ${event.description}`}>
+        onMouseEnter={() => setActive(slug)} onFocus={() => setActive(slug)}>
         <img src={event.asset} alt="" />
+        <span className="plate-type">{event.tag}</span>
+        <strong>drink.</strong>
+        <span className="plate-title">{event.short}</span>
+        <span className="plate-copy">{event.description}</span>
       </Link>
     ))}
   </section>;

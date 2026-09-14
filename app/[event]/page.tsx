@@ -18,7 +18,7 @@ export default async function EventPage({ params }: { params: Promise<{ event: s
     <Nav inverse={key === "festivals"} />
     <section className="event-hero">
       <div className="event-copy"><p className="event-label">{item.name}</p><h1>{content.title}</h1><p className="event-lead">{content.lead}</p><a className="event-action" href="#plan">start planning</a></div>
-      <div className="event-artefact"><img src={item.asset} alt={`Printed ${item.tag} for ${item.name}`} /></div>
+      <div className="event-artefact"><img src={item.asset} alt="" /><div className="artefact-copy"><span>{item.tag}</span><strong>drink.</strong><p>{item.short}</p></div></div>
     </section>
     <section className="event-story"><p>{content.body}</p><p>{content.detail}</p><div className="menu-list"><span>On the menu</span>{content.menu.map(name => <b key={name}>{name}</b>)}</div></section>
     <section className="next-occasion"><p>Same van. Different occasions.</p><div>{Object.entries(events).filter(([slug]) => slug !== key).map(([slug, entry]) => <Link key={slug} href={`/${slug}`}>{entry.short} <span aria-hidden>↗</span></Link>)}</div></section>
