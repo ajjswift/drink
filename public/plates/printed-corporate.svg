@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" role="img" aria-labelledby="title desc">
+  <title id="title">drink. corporate service sheet</title><desc id="desc">A lilac corporate service sheet for drink. mobile drinks.</desc>
+  <image href="/plates/corporate-sheet.png" width="1024" height="1536"/>
+  <g fill="#171a25" font-family="Poppins, Arial, sans-serif">
+    <text x="160" y="290" font-size="43" font-weight="700" letter-spacing="10">SERVICE SHEET</text>
+    <text x="150" y="590" font-size="185" font-weight="700" letter-spacing="-16">drink.</text>
+    <text x="160" y="755" font-size="63" font-weight="700" letter-spacing="7">CORPORATE</text>
+  </g>
+</svg>

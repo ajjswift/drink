@@ -1,0 +1,5 @@
+.impeccable
+.next
+node_modules
+package.json
+.env
