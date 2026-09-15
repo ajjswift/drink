@@ -4,14 +4,33 @@ import { getMenu, menuForOccasion, type Menu } from "../lib/menu";
 type MenuCopy = { heading: string; description: string };
 
 const DEFAULT_MENU_COPY: MenuCopy = {
-  heading: "The same good drink, with or without alcohol.",
-  description: "Our cocktail recipes are built so the alcohol can be taken out for a mocktail that tastes almost the same.",
+  heading: "The drinks people know and love.",
+  description: "A full menu of familiar cocktail favourites, mixed for your occasion. Alcohol-free versions are available too.",
 };
 
 export const SCHOOL_FETE_MENU_COPY: MenuCopy = {
   heading: "All the cocktail flavour. Zero alcohol.",
   description: "Every drink is made without alcohol, while keeping the familiar look and taste of the cocktails you know.",
 };
+
+export function MenuSectionSkeleton() {
+  return <section className="menu-section menu-skeleton" id="menu" aria-busy="true" aria-label="Loading the menu">
+    <div className="menu-intro" aria-hidden="true">
+      <p className="section-mark">The menu</p>
+      <span className="skeleton-block skeleton-heading" />
+      <span className="skeleton-block skeleton-copy" />
+      <span className="skeleton-block skeleton-copy short" />
+    </div>
+    <div className="menu-board" aria-hidden="true">
+      <section className="menu-category">
+        <span className="skeleton-block skeleton-category" />
+        <div className="skeleton-list">
+          <span className="skeleton-block" /><span className="skeleton-block" /><span className="skeleton-block" /><span className="skeleton-block short" /><span className="skeleton-block" />
+        </div>
+      </section>
+    </div>
+  </section>;
+}
 
 /** Server Component: the live Square menu. Keeps the Square token on the server. */
 export async function MenuSection({ menu: suppliedMenu, copy = DEFAULT_MENU_COPY }: { menu?: Menu; copy?: MenuCopy } = {}) {
@@ -23,7 +42,7 @@ export async function MenuSection({ menu: suppliedMenu, copy = DEFAULT_MENU_COPY
       <p className="section-mark">The menu</p>
       <h2>{copy.heading}</h2>
       <p>{copy.description}</p>
-      <Link href="/#occasions" className="text-link">Choose your occasion <span aria-hidden>→</span></Link>
+      <Link href="/#occasions" className="text-link">See every occasion <span aria-hidden>→</span></Link>
     </div>
     <div className="menu-board">
       {categories.map(category => (
