@@ -48,14 +48,6 @@ export function Passboard() {
   </section>;
 }
 
-export function MenuNote() {
-  return <section className="menu-note" id="menu">
-    <div><p className="section-mark">The menu</p><h2>The same good drink, with or without alcohol.</h2></div>
-    <p>Our cocktail recipes are built so the alcohol can be taken out for a mocktail that tastes almost the same. Purple Rain, Pornstar Martini, Mojito and Piña Colada are all on the current menu.</p>
-    <Link href="/festivals" className="text-link">See the occasions <span aria-hidden>→</span></Link>
-  </section>;
-}
-
 export function PlanningStrip({ event }: { event?: EventKey }) {
   const eventName = event ? events[event].name.toLowerCase() : "occasion";
   return <section className="planning-strip" id="plan">

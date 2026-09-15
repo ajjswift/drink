@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { MenuNote, Nav, Passboard, PlanningStrip } from "./components";
+import { Nav, Passboard, PlanningStrip } from "./components";
+import { MenuSection } from "./menu";
+
+/** Square data is cached through Redis in production; see lib/menu.ts. */
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   return <main>
@@ -16,7 +20,7 @@ export default function Home() {
       <p className="hero-signoff">same van.<br />different occasions.</p>
     </section>
     <section className="occasions-intro" id="occasions"><p>Pick the invitation that feels most like your day.</p><div className="occasion-links"><Link href="/festivals">Festival energy</Link><Link href="/school-fetes">Fete-friendly</Link><Link href="/corporate">Corporate-ready</Link><Link href="/weddings">Wedding quiet</Link></div></section>
-    <MenuNote />
+    <MenuSection />
     <PlanningStrip />
   </main>;
 }
